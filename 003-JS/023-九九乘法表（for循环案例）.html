@@ -3,21 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<title>23-九九乘法表(for循环案例).html</title>
-	<style>
-		
-	</style>
 </head>
 <body>
-	
 </body>
 <script>
 	for(var i=1;i<=9;i++){
-		var a = i;
-		for(var j=1;j<=9;j++){
-			var b = j;
-			var c = a*b;
-			console.log('a'+'*'+'b'+'='+'c');
+		document.write('<p>')
+		for(var j=1;j<=i;j++){
+			document.write(j+'*'+i+'='+i*j+'&nbsp;')
 		}
+		document.write('<br>')
+		document.write('</p>')
 	}
 </script>
 </html>
