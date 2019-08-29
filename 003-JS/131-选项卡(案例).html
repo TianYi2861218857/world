@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 	<meta charset="UTF-8">
-	<title>22-选项卡(for循环案例)).html</title>
+	<title>选项卡</title>
 	<style>
 		*{
 			margin: 0;
@@ -50,7 +50,7 @@
 	</ul>
 </body>
 <script>
-	var aBtn = document.querySelectorAll('#btn-list li');
+	/*var aBtn = document.querySelectorAll('#btn-list li');
 	var aContent = document.querySelectorAll('#content-list li');
 	for(var i=0;i<aBtn.length;i++){
 		// console.log(aBtn[i])
@@ -64,6 +64,26 @@
 			this.className = 'active';
 			aContent[this.index].style.display = 'block';
 		}
+	}*/
+	function Tap(){
+		//罗列属性
+		this.aBtn = document.querySelectorAll('#btn-list li');
+		this.aContent = document.querySelectorAll('#content-list li')
+		//添加绑定事件
+		this.bindEvent();
+	}
+	Tap.prototype.bindEvent=function(){
+		console.log(this)
+		var _this = this;
+		for(var i=0;i<this.aBtn.length;i++){
+			this.aBtn[i].onclick = function(){
+				console.log(this)
+				_this.fnClick(this);
+		}
+	}
+	Tap.prototype.fnClick=function(oBtn){
+		console.log(this)
+		
 	}
 </script>
 </html>
