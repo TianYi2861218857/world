@@ -556,7 +556,8 @@
             if(oPwd.value == ''){
                 setError(aMsg[2],'请您输入密码',oPwd);
             }else{
-                setOk(aMsg[2],oPwd);
+                // setOk(aMsg[2],oPwd);
+                aMsg[2].className = 'msg';
             }
             if(oVerify.value == ''){
                 setError(aMsg[3],'请您输入验证码',oVerify);
